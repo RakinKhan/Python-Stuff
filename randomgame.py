@@ -1,16 +1,23 @@
-import sys
 from random import randint
+import sys
 
-randomNumber = randint(1, 10)
+randomNumber = randint(int(sys.argv[1]), int(sys.argv[2]))
+print(randomNumber)
 
 while True:
-    guess = int(input(f'Guess a number between 1 and 10: '))
-    if guess > 0 and guess < 11:
-        if guess == randomNumber:
-            print('Congratulations! You guessed right.')
+
+    guess = input('Guess a number between 1 and 10: ')
+    try:
+        if int(guess) > 0 and int(guess) < 11:
+            if int(guess) == randomNumber:
+                print('Congratulations! You guessed right.')
+                break
+            else:
+                print('Sorry! Guess again')
+                continue
         else:
-            print('Sorry! Guess again')
+            print('Sorry, please guess a number between 1 and 10')
             continue
-    else:
-        print('Sorry, please guess a number between 1 and 10')
+    except ValueError:
+        print('Use the number buttons')
         continue
