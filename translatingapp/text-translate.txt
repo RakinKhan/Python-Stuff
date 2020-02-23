@@ -1,0 +1,3 @@
+Hi my name is Rakin. How are you?
+ -> こんにちは私の名前はRakinです。お元気ですか？
+I am fine. -> 私は元気です。
